@@ -1,0 +1,54 @@
+<div class="newNote">
+<a ng-click="noteForm=!noteForm" href="/"><h4>create a new note <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+</h4></a>
+</div>
+
+
+
+
+
+<form ng-show="noteForm" name="userForm" ng-submit="vm.sendData()" >
+  <h1>Create Your New Note</h1>
+
+  <input type="text" name="title" ng-model="vm.note.title" placeholder=" title">
+  <input type="date" name="date" ng-model="vm.note.date" >
+  <textarea type="text" id="mytextarea" name="content" rows="8" cols="40" ng-model="vm.note.content"></textarea>
+  <button  ng-click="noteForm=!noteForm ; vm.sendUserNote(vm.note)" type="submit"  >Submit</button>
+</form>
+
+<div class="row">
+
+
+<div ng-repeat="note in vm.notes" class="col-md-4" id="notes">
+
+    <a href="#">
+    <div class="note">
+      <p class="title">{{note.title}}</p>
+      <p class="date">{{note.date}}</p>
+    </div><!-- note -->
+  </a><!-- a-->
+</div><!-- col -->
+
+
+
+
+<div class="col-md-4" id="notes">
+    <a href="#">
+    <div class="note">
+      <p class="title">dsdsdsds</p>
+      <p class="date">90</p>
+    </div><!-- note -->
+  </a><!-- a-->
+</div><!-- col -->
+<div class="col-md-4" id="notes">
+    <a href="#">
+    <div class="note">
+      <p class="title">dsdsdsds</p>
+      <p class="date">90</p>
+    </div><!-- note -->
+  </a><!-- a-->
+</div><!-- col -->
+
+
+
+</div><!-- row -->
