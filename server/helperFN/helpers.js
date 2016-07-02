@@ -26,5 +26,6 @@ exports.deleteData = function(callback, params){
     }
     global.myStorage.splice(index, 1)
     console.log("all my notes in helpers delete " , global.myStorage)
+    console.log("index of note deleted " , index)
     callback("your note has been deleted success")
 }

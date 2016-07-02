@@ -12,6 +12,8 @@
       vm.note = {};
       vm.id = 0;
 
+
+
       vm.sendUserNote = function(){
         vm.note.id = vm.id;
         vm.id++;
@@ -36,6 +38,6 @@
       }
 
     }
-    vm.getNotes();
+
 
 })();
