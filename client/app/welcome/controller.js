@@ -37,6 +37,8 @@
         $state.go('note')
       }
 
+      vm.getNotes();
+
     }
 
 

@@ -13,8 +13,9 @@
       vm.note = $localStorage.note;
 
       vm.upDateNote = function(note){
-        Note.updateNote(note).then(function(){
-
+        console.log("update NOTE in controller")
+        Note.upDateNote(note).then(function(){
+          $state.go('welcome');
         })
       };
       vm.deleteNote = function(note){

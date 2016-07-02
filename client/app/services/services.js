@@ -58,11 +58,11 @@
         }
 
         function deleteNote(note){
-          console.log("line 59 : services DELETE ", note, "noteID: :", note.id);
+          console.log("line 59 : services DELETE ", note, "noteID: :", note._id);
           return $http ({
             method:'DELETE',
-            url:'/api/notes/'+ note.id,
-            data: note
+            url:'/api/notes/'+ note._id,
+            data: note._id
           })
           .then(function(res){
             console.log(res.data);
@@ -75,19 +75,21 @@
 
         function upDateNote(note){
           console.log("line 78 : services UPDATE ", note);
-    //       return $http ({
-    //         method:'POST',
-    //         url:'/api/notes/' + note.id,
-    //         data: note
-    //       })
-    //       .then(function(res){
-    //         console.log(res.data);
-    // res.data;
-    //         return 'data recieved';
-    //       })
-    //       .catch(function(err){
-    //         console.error("SendUserNote cannot POST ", err)
-    //       })
+          return $http ({
+            method:'PUT',
+            url:'/api/notes/' + note._id,
+            data: note
+          })
+          .then(function(res){
+            console.log(res.data);
+            console.log("Services PUT ");
+
+
+            return res.data;;
+          })
+          .catch(function(err){
+            console.error("SendUserNote cannot PUT ", err)
+          })
         }
 
     //   function sendUserNote(note){

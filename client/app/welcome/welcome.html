@@ -10,12 +10,16 @@
 
 
 <form ng-show="noteForm" name="userForm" ng-submit="vm.sendData()" >
-  <h1>Create Your New Note</h1>
+   <div class="spacer"></div>
 
-  <input type="text" name="title" ng-model="vm.note.title" placeholder=" title">
+  <h1>Create Your New Note   <a ng-click="noteForm=!noteForm" ><i class="fa fa-times" aria-hidden="true"></i></a></h1>
+
+  <input type="text" name="title" ng-model="vm.note.title" placeholder=" title" required>
   <input type="date" name="date" ng-model="vm.note.date" >
   <textarea type="text" id="mytextarea" name="content" rows="8" cols="40" ng-model="vm.note.content"></textarea>
   <button  ng-click="noteForm=!noteForm ; vm.sendUserNote(vm.note);vm.getNotes()  " type="submit"  >Submit</button>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
 </form>
 
 <div class="row">
@@ -34,23 +38,14 @@
 
 
 
-<div class="col-md-4" id="notes">
-    <a href="#">
-    <div class="note">
-      <p class="title">dsdsdsds</p>
-      <p class="date">90</p>
-    </div><!-- note -->
-  </a><!-- a-->
-</div><!-- col -->
-<div class="col-md-4" id="notes">
-    <a href="#">
-    <div class="note">
-      <p class="title">dsdsdsds</p>
-      <p class="date">90</p>
-    </div><!-- note -->
-  </a><!-- a-->
-</div><!-- col -->
-
-
-
 </div><!-- row -->
+
+
+
+
+
+
+
+
+
+

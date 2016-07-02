@@ -1,4 +1,17 @@
+var mongoose = require('mongoose');
 var helper = require('../helperFN/helpers.js')
+var db = require('../db.js')
+var Note = require("./note.js")
+
+
+
+
+//
+//exports.save(function(err, note){
+//
+//
+//
+//})
 
 
 module.exports = {
@@ -15,16 +28,30 @@ module.exports = {
     delete: function(callback, params){
         console.log( "Model post DELETE")
         helper.deleteData(callback, params)
-      }
+      },
+    put: function(callback, params){
+      console.log( "Model post inside Notes")
+      helper.updateData(callback, params)
+    }
 
   }
-  // 'links': {
-  //   get: function(callback, params){
-  //     console.log('GET links ');
-  //   },
-  //   post: function(callback, params){
-  //     console.log("POST links")
-  //   }
-  // }
+
+
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

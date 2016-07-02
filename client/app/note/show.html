@@ -1,5 +1,18 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3" >
+    <div class="spacer"></div>
+    <form ng-show="noteEditModal" name="userForm" ng-submit="vm.sendData()" >
+    <h1>Update Note   <a ng-click="noteEditModal=!noteEditModal" ><i class="fa fa-times" aria-hidden="true"></i></a></h1>
+
+    <input type="text" name="title" ng-model="vm.note.title" placeholder=" title">
+    <input type="date" name="date" ng-model="vm.note.date" value="vm.note.date" >
+    <textarea type="text" id="mytextarea" name="content" rows="8" cols="40" ng-model="vm.note.content"></textarea>
+    <button  ng-click="vm.upDateNote(vm.note)" type="submit"  >Submit</button>
+    <div class="spacer"> </div>
+  </form>
+
+
+
     <div class="panel panel-default">
       <div class="panel-body">
 
@@ -9,23 +22,15 @@
     <div class="buttons">
       <a><i ng-click="noteEditModal=!noteEditModal" class="fa fa-pencil " aria-hidden="true">    </i>
       <a>
-  
+
     <a><i ng-click="vm.deleteNote(vm.note)" class="fa fa-trash " aria-hidden="true"></i>
     </a>
     </div>
 
-  	</div><!-- note_show -->
+      </div><!-- note_show -->
   </div><!--panel - body-->
   </div><!--panel-->
-  <form ng-show="noteEditModal" name="userForm" ng-submit="vm.sendData()" >
-    <h1>Create Your New Note</h1>
 
-    <input type="text" name="title" ng-model="vm.note.title" placeholder=" title">
-    <input type="date" name="date" ng-model="vm.note.date" >
-    <textarea type="text" id="mytextarea" name="content" rows="8" cols="40" ng-model="vm.note.content"></textarea>
-    <button  ng-click="noteForm=!noteForm" type="submit"  >Submit</button>
-    <div class="spacer"> </div>
-  </form>
 </div><!-- col-md-6-->
 </div>
 <!-- <div ng-show="noteEditModal" class="modal fade" tabindex="-1" role="dialog">
