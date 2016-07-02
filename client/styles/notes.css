@@ -34,6 +34,17 @@
 .panel.panel-default{
   margin-top: 40px;
 }
+
+#note_show .noteImgCont {
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+#note_show .noteImg {
+    margin: 0 auto;
+
+}
+
 #note_show p {
   font-size: 1.375rem;
   line-height: 1.75;
@@ -46,7 +57,9 @@
   color: #33CD99;
   padding: 3rem 2rem 0 0;
 }
-
+.float-left{
+    float: right;
+}
 @media screen and (max-width: 560px) {
   #notes .note {
     width: 90%;

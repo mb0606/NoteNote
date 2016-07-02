@@ -11,6 +11,9 @@ var noteSchema = new mongoose.Schema({
   },
   content: {
       type: String
+  },
+  img:{
+      type: String
   }
 });
 

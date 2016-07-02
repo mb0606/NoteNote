@@ -23,6 +23,9 @@
           $state.go('welcome');
         })
       };
+        vm.goBack = function(note){
+          $state.go('welcome');
+      };
 
     }
 

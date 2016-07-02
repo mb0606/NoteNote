@@ -27,6 +27,7 @@ module.exports = {
       console.log( "Controller posts notes");
      //models.save
      var newNote = {title: req.body.title,
+                    img: req.body.img,
                     date: req.body.date,
                     content: req.body.content
                    }

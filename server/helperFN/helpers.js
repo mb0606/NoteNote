@@ -69,6 +69,7 @@ exports.UpdateNote = function(req, res){
     var updatedNote = {
         title: req.body.title,
         date: req.body.date,
+        img: req.body.img,
         content: req.body.content
     }
     console.log("inside helper update", req.params)

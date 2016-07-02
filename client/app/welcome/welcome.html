@@ -16,6 +16,9 @@
 
   <input type="text" name="title" ng-model="vm.note.title" placeholder=" title" required>
   <input type="date" name="date" ng-model="vm.note.date" >
+
+          <input type="text" name="img" ng-model="vm.note.img" value="vm.note.img" placeholder="http://popcrush.com/files/2015/05/mariah-eminem.gif" >
+
   <textarea type="text" id="mytextarea" name="content" rows="8" cols="40" ng-model="vm.note.content"></textarea>
   <button  ng-click="noteForm=!noteForm ; vm.sendUserNote(vm.note);vm.getNotes()  " type="submit"  >Submit</button>
   <div class="spacer"></div>
