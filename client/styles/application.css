@@ -34,6 +34,9 @@
 .spacer {
   height: 60px;
 }
+.spacer2 {
+  height: 30px;
+}
 
  button, .button {
    border: none;
