@@ -25,7 +25,7 @@
 <div class="row">
 
 <!--ALL NOTES -->
-<div ng-repeat="note in vm.data | filter:search " class="col-md-4" id="notes">
+<div ng-repeat="note in filteresNote=(vm.notes | filter:search |orderBy:'date':true)" class="col-md-4" id="notes">
 
 
     <div class="note" noteId={{note.id}} ng-click="vm.openNote(note)" >

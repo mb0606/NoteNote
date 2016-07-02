@@ -27,7 +27,7 @@
       vm.getNotes = function () {
         Welcome.getUserNote().then(function (notes) {
           console.log('this is data', notes);
-          vm.data = notes;
+          vm.notes = notes;
         })
       }
       vm.openNote = function(note){
