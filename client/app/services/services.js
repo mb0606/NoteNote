@@ -92,23 +92,7 @@
           })
         }
 
-    //   function sendUserNote(note){
-    //   }
-    //   function getUserNote(){
-    //     console.log("line 30 : services getUserNote")
-    //
-    //     return $http ({
-    //       method:'GET',
-    //       url:'/api/notes',
-    //     })
-    //     .then(function(res){
-    //       return res.data
-    //     })
-    //     .catch(function(err){
-    //       console.log("line 40: Services ", err)
-    //     })
-    //   }
-    //
+
       return service;
     }
 

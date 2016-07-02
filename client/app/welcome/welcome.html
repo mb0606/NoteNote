@@ -8,7 +8,7 @@
 
 <input id="search" type="text" ng-model="search" placeholder="  Search ...">
 
-
+<!--FORM FOR NEW NOTE-->
 <form ng-show="noteForm" name="userForm" ng-submit="vm.sendData()" >
    <div class="spacer"></div>
 
@@ -24,7 +24,7 @@
 
 <div class="row">
 
-
+<!--ALL NOTES -->
 <div ng-repeat="note in vm.data | filter:search " class="col-md-4" id="notes">
 
 
