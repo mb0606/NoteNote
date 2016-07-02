@@ -31,6 +31,10 @@
    clear: both;
  }
 
+.spacer {
+  height: 60px;
+}
+
  button, .button {
    border: none;
    outline: none;
@@ -63,6 +67,7 @@
    width: 100%;
    padding: 1.75rem 0;
    border-bottom: 7px solid #33CD99;
+
  }
  header .header_inner {
    width: 90%;
@@ -101,6 +106,10 @@
    margin: 0;
    font-size: .65rem;
  }
+
+#search {
+  max-width: 250px;
+}
 
  input[type="text"], input[type="email"], input[type="date"], input[type="password"], textarea {
    width: 100%;

@@ -4,7 +4,8 @@
   angular.module('myApp', [
     'myApp.dependencies',
     'myApp.services',
-    'myApp.welcome'
+    'myApp.welcome',
+    'myApp.note'
     ])
 
 })();

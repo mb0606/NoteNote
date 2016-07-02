@@ -5,7 +5,7 @@
   .module('myApp.welcome', [])
     .controller("WelcomeController", WelcomeController);
 
-    function WelcomeController(Welcome) {
+    function WelcomeController(Welcome, Note, $state) {
 
       var vm = this;
       vm.notes = {};
@@ -22,13 +22,20 @@
         });
 
       }
-      vm.getLinks = function () {
+      vm.getNotes = function () {
         Welcome.getUserNote().then(function (notes) {
           console.log('this is data', notes);
           vm.data = notes;
         })
       }
+      vm.openNote = function(note){
+        console.log('this is welcome note: ', note);
+
+        Note.saveNote(note);
+        $state.go('note')
+      }
 
     }
+    vm.getNotes();
 
 })();

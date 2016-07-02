@@ -1,10 +1,12 @@
+<div class="spacer"></div>
+
+
 <div class="newNote">
 <a ng-click="noteForm=!noteForm" href="/"><h4>create a new note <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
 </h4></a>
 </div>
 
-
-
+<input id="search" type="text" ng-model="search" placeholder="  Search ...">
 
 
 <form ng-show="noteForm" name="userForm" ng-submit="vm.sendData()" >
@@ -13,20 +15,20 @@
   <input type="text" name="title" ng-model="vm.note.title" placeholder=" title">
   <input type="date" name="date" ng-model="vm.note.date" >
   <textarea type="text" id="mytextarea" name="content" rows="8" cols="40" ng-model="vm.note.content"></textarea>
-  <button  ng-click="noteForm=!noteForm ; vm.sendUserNote(vm.note)" type="submit"  >Submit</button>
+  <button  ng-click="noteForm=!noteForm ; vm.sendUserNote(vm.note);vm.getNotes()  " type="submit"  >Submit</button>
 </form>
 
 <div class="row">
 
 
-<div ng-repeat="note in vm.notes" class="col-md-4" id="notes">
+<div ng-repeat="note in vm.data | filter:search " class="col-md-4" id="notes">
 
-    <a href="#">
-    <div class="note">
+
+    <div class="note" noteId={{note.id}} ng-click="vm.openNote(note)" >
       <p class="title">{{note.title}}</p>
       <p class="date">{{note.date}}</p>
     </div><!-- note -->
-  </a><!-- a-->
+
 </div><!-- col -->
 
 

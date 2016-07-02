@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3" >
+    <div class="panel panel-default">
+      <div class="panel-body">
+
+    <div id="note_show">
+     <h1 class="title">{{vm.note.title}}</h1>
+    <p>{{vm.note.content}}</p>
+    <div class="buttons">
+      <a><i ng-click="noteEditModal=!noteEditModal" class="fa fa-pencil " aria-hidden="true">    </i>
+      <a>
+  
+    <a><i ng-click="vm.deleteNote(vm.note)" class="fa fa-trash " aria-hidden="true"></i>
+    </a>
+    </div>
+
+  	</div><!-- note_show -->
+  </div><!--panel - body-->
+  </div><!--panel-->
+  <form ng-show="noteEditModal" name="userForm" ng-submit="vm.sendData()" >
+    <h1>Create Your New Note</h1>
+
+    <input type="text" name="title" ng-model="vm.note.title" placeholder=" title">
+    <input type="date" name="date" ng-model="vm.note.date" >
+    <textarea type="text" id="mytextarea" name="content" rows="8" cols="40" ng-model="vm.note.content"></textarea>
+    <button  ng-click="noteForm=!noteForm" type="submit"  >Submit</button>
+    <div class="spacer"> </div>
+  </form>
+</div><!-- col-md-6-->
+</div>
+<!-- <div ng-show="noteEditModal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <p>One fine body&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  <!-- </div><!-- /.modal-dialog -->
+<!-- </div><!-- /.modal -->

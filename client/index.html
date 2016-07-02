@@ -5,10 +5,11 @@
     <title>My App</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <scrip src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></scrip>
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/notes.css">
     <link rel="stylesheet" href="./styles/application.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 
     <!-- <script src='http://cdn.tinymce.com/4/tinymce.min.js'></script>
     <script src='js/main.js'></script> -->
@@ -24,22 +25,25 @@
       <img src="./assets/images/logo.svg" alt="">
     </a>
   </div>
-  </header>
-  <div class="notice"> this will be an notification </div>
+</header>
+  <!-- <div class="notice"> this will be an notification </div> -->
   <div class="container">
-
+  <row>
   <div ui-view></div>
-
+</row>
   </div>
 
   <!-- <footer> 		&copy; Marco Berardini 2016 </footer> -->
 
     <!-- Library Files -->
     <script>console.log("APP LAYOUT")</script>
-    <script src="./js/monmen.js" ></script>
+    <script src="./app/js/moment.js" ></script>
     <script type="text/javascript" src="./lib/angular/angular.min.js"></script>
     <script type="text/javascript" src="./lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="./lib/angular-animate/angular-animate.js"></script>
+    <script src="./lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 
+    <script type="text/javascript" src="./lib/ngstorage/ngStorage.min.js"></script>
     <!-- App Settings -->
     <script src="./app/app.js"></script>
 
@@ -48,6 +52,7 @@
   <!-- <script src="./app/run.js"></script> -->
   <script src="./app/services/services.js"></script>
   <script src="./app/welcome/controller.js"></script>
+  <script src="./app/note/controller.js"></script>
 
 
   </body>

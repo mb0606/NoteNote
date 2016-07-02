@@ -13,6 +13,12 @@
           templateUrl: './app/welcome/welcome.html',
           controller: 'WelcomeController as vm'
         })
+        .state('note', {
+          url: '/note/noteId:id',
+          auth: false,
+          templateUrl: './app/note/show.html',
+          controller: 'NoteController as vm'
+        })
 
       $urlRouterProvider
         .otherwise('/welcome');

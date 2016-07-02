@@ -3,7 +3,10 @@
 
   angular
   .module('myApp.dependencies', [
-    'ui.router'
+    'ui.router',
+    'ngStorage',
+    'ngAnimate',
+    'ui.bootstrap'
     ])
 
 })();

@@ -28,6 +28,12 @@
   border-bottom: 1px solid #E9E9E9;
 }
 #note_show p {
+  min-height: 400px;
+}
+.panel.panel-default{
+  margin-top: 40px;
+}
+#note_show p {
   font-size: 1.375rem;
   line-height: 1.75;
 }
